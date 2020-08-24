@@ -30,6 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 import SimpleUploadAdapter from "@ckeditor/ckeditor5-upload/src/adapters/simpleuploadadapter";
+import LinkImage from "@ckeditor/ckeditor5-link/src/linkimage";
 
 export default class ClassicEditor extends ClassicEditorBase {}
 
@@ -51,6 +52,7 @@ ClassicEditor.builtinPlugins = [
 	ImageUpload,
 	Indent,
 	Link,
+    LinkImage,
 	List,
 	MediaEmbed,
 	Paragraph,
@@ -92,7 +94,9 @@ ClassicEditor.defaultConfig = {
 			'imageStyle:full',
 			'imageStyle:side',
 			'|',
-			'imageTextAlternative'
+			'imageTextAlternative',
+            '|',
+            'linkImage'
 		]
 	},
 	table: {
